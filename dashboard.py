@@ -163,6 +163,14 @@ def initialize_filter_state(key_col, df_data, mes_ordenacao=False):
 
 # --- Geração dos Filtros ---
 
+if st.sidebar.button("Recarregar Dados (Forçar Atualização)"):
+    # Esta função Streamlit limpa programaticamente todos os caches
+    st.cache_resource.clear() 
+    # Recarrega a página para buscar os novos dados
+    st.rerun()
+
+st.sidebar.markdown("---")
+
 # FILTRO: ANO
 initialize_filter_state('ANO', df)
 st.sidebar.checkbox(
@@ -822,4 +830,5 @@ else:
 
 # Opcional: Mostrar os dados filtrados em uma tabela
 if st.checkbox("Mostrar dados filtrados (Tabela)"):
+
     st.dataframe(df_filtrado)   
