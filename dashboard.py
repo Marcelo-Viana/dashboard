@@ -894,7 +894,7 @@ if 'cliente_aberto' not in st.session_state:
     st.session_state['cliente_aberto'] = None
 
 # --- DEFINIÇÃO DO LAYOUT ---
-st.subheader("9. Análise de Queda Comparativa (Período 1 vs. Período 2)")
+#st.subheader("9. Análise de Queda Comparativa (Período 1 vs. Período 2)")
 
 # Larguras das colunas: [Botão, Ícone, Cliente, UF, Período 1, Período 2, Queda]
 colunas_widths = [0.4, 0.4, 3, 1, 1.5, 1.5, 1.5] 
@@ -1011,3 +1011,4 @@ else:
 if st.checkbox("Mostrar dados filtrados (Tabela)"):
 
     st.dataframe(df_filtrado)   
+
