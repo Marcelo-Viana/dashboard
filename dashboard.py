@@ -905,7 +905,7 @@ cols_header = st.columns(colunas_widths)
 for col_name, col_obj in zip(colunas_nomes, cols_header):
     # Usamos st.markdown para reduzir o espaçamento
     col_obj.markdown(f"**{col_name}**")
-st.markdown("---") 
+#st.markdown("---") 
 
 # --- INÍCIO DO CONTAINER COM BARRA DE ROLAGEM (ALTURA FIXA) ---
 with st.container(height=400, border=True): 
@@ -1011,4 +1011,5 @@ else:
 if st.checkbox("Mostrar dados filtrados (Tabela)"):
 
     st.dataframe(df_filtrado)   
+
 
