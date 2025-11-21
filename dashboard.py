@@ -922,7 +922,7 @@ with st.container(height=400, border=True):
         # Coluna 1: O PEQUENO BOTÃO
         with cols[0]:
             # Usamos o emoji no botão e key única
-            if st.button("✏️", key=f"btn_open_{index}", help="Abrir Observação"):
+            if st.button("✏️", key=f"btn_open_{index}"):
                 st.session_state['cliente_aberto'] = cliente
                 st.rerun()
 
@@ -1011,5 +1011,6 @@ else:
 if st.checkbox("Mostrar dados filtrados (Tabela)"):
 
     st.dataframe(df_filtrado)   
+
 
 
