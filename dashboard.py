@@ -801,6 +801,7 @@ for ano_sel in sorted(anos_filtrados):
 
 # 2. Verificar se o número de períodos é par
 num_periodos = len(periodos_completos)
+df_final = pd.DataFrame()
 
 if not df_filtrado.empty and num_periodos > 0 and num_periodos % 2 == 0:
     
@@ -1008,4 +1009,5 @@ else:
 
 # Opcional: Mostrar os dados filtrados em uma tabela
 if st.checkbox("Mostrar dados filtrados (Tabela)"):
+
     st.dataframe(df_filtrado)   
